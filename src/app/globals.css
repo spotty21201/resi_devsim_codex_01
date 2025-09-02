@@ -1,0 +1,60 @@
+/* Global responsive tweaks for header and layout */
+
+body {
+  margin: 0;
+}
+
+.app-header {
+  border-bottom: 1px solid #000;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.app-title-wrap {
+  display: flex;
+  gap: 6px;
+  align-items: flex-start;
+  flex: 1 1 auto;
+  min-width: 0;
+  flex-direction: column;
+}
+
+.app-title {
+  font-size: 26px; /* larger */
+  color: #4b5563; /* lighter gray */
+}
+
+.app-subtitle { color: #6b7280; font-size: 14px; }
+.app-title-line { display: flex; gap: 12px; align-items: baseline; flex-wrap: wrap; }
+.app-byline { color: #6b7280; font-size: 14px; }
+.app-tagline { color: #6b7280; font-size: 13px; }
+
+.app-logo {
+  object-fit: contain;
+  width: 180px;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .app-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .app-logo {
+    align-self: flex-end;
+    width: 140px;
+  }
+  .app-title {
+    font-size: 22px;
+  }
+  .app-byline { font-size: 13px; }
+  .app-tagline { font-size: 12px; }
+}
+
+@media (max-width: 480px) {
+  .app-logo { width: 120px; }
+  .app-title { font-size: 20px; }
+}
